@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "498473808887",
+    "project_id": "tyfon-cb53e",
+    "storage_bucket": "tyfon-cb53e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498473808887:android:01d2c4e93218deea5e74f2",
+        "android_client_info": {
+          "package_name": "com.example.tyfon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498473808887-mmud32a4s0bis06r529c0hkfb2pm86vd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVpHrOh_zBh2mMcp18iDLFYgIbAdtr3T4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498473808887-mmud32a4s0bis06r529c0hkfb2pm86vd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
