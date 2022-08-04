@@ -73,8 +73,19 @@ class RegisterPageEmail extends StatelessWidget {
                                 color: Colors.black87),
                           ),
                         ),
+                        SizedBox(height: height * 0.03),
+                        const Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "Con tu correo podrás acceder a un mundo digital nunca antes visto, además de esto podrás ser parte de una red de servicios, novedades y ofertas únicas que Fliyk A Regular Sales Company™ ofrece para ti y tu negocio. ",
+                            style: TextStyle(
+                                fontFamily: 'Silka Semibold',
+                                fontSize: 12,
+                                color: Colors.black87),
+                          ),
+                        ),
                         SizedBox(
-                          height: height * 0.08,
+                          height: height * 0.05,
                         ),
                         CustomInputField(
                           inputType: TextInputType.emailAddress,
@@ -118,7 +129,7 @@ class RegisterPageEmail extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5.0)),
                             onPressed: () =>
-                                router.popAndPushNamed(Routes.REGISTERNAME),
+                                router.pushNamed(Routes.REGISTERNAME),
                             child: const Text(
                               'Siguiente',
                               style: TextStyle(

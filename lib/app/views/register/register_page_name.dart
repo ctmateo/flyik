@@ -34,27 +34,14 @@ class RegisterPageName extends StatelessWidget {
                     key: controller.formKey,
                     child: Column(
                       children: [
-                        SizedBox(height: height * 0.1),
-                        Align(
-                            alignment: Alignment.centerLeft,
-                            child: OutlinedButton(
-                              child: const Icon(
-                                Icons.arrow_back,
-                                color: Colors.black,
-                              ),
-                              style: OutlinedButton.styleFrom(
-                                  side: const BorderSide(
-                                      color: Colors.black, width: 1)),
-                              onPressed: () =>
-                                  router.pushNamedAndRemoveUntil(Routes.LOGIN),
-                            )),
+                        SizedBox(height: height * 0.05),
                         SizedBox(
                           height: height * 0.04,
                         ),
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "Cuál es tu",
+                            "Ingresa los",
                             style: TextStyle(
                                 fontFamily: 'Silka Bold',
                                 fontSize: 26,
@@ -64,18 +51,36 @@ class RegisterPageName extends StatelessWidget {
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "primer nombre",
+                            "siguientes datos",
                             style: TextStyle(
                                 fontFamily: 'Silka Bold',
                                 fontSize: 26,
                                 color: Colors.black87),
                           ),
                         ),
+                        SizedBox(height: height * 0.05),
+                        const Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "Sabemos que para ti y para nosotros es importante la privacidad de los datos, por ese motivo queremos que confíes de que tus datos estarán siempre seguros y seran utilizados solo para fines de seguridad.",
+                            style: TextStyle(
+                                fontFamily: 'Silka Semibold',
+                                fontSize: 12,
+                                color: Colors.black87),
+                          ),
+                        ),
                         SizedBox(
-                          height: height * 0.08,
+                          height: height * 0.05,
                         ),
                         CustomInputField(
                           hintText: 'Nombre',
+                          onChanged: controller.onNameChanged,
+                        ),
+                        SizedBox(
+                          height: height * 0.03,
+                        ),
+                        CustomInputField(
+                          hintText: 'Apellido',
                           onChanged: controller.onNameChanged,
                         ),
                         SizedBox(

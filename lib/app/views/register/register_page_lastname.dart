@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_meedu/state.dart';
+import 'package:tyfon/app/domain/inputs/sign_up.dart';
 import 'package:tyfon/app/views/global_controllers/session_controller.dart';
 import 'package:tyfon/app/views/global_widgets/custom_input_field.dart';
 import 'package:tyfon/app/views/register/controller/register_controller.dart';
@@ -18,8 +19,9 @@ class RegisterPageLastName extends StatelessWidget {
   const RegisterPageLastName({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  build(BuildContext context) async {
     final double height = MediaQuery.of(context).size.height;
+
     return ProviderListener<RegisterController>(
       provider: registerProvider,
       builder: (_, controller) {
@@ -35,25 +37,14 @@ class RegisterPageLastName extends StatelessWidget {
                     key: controller.formKey,
                     child: Column(
                       children: [
-                        SizedBox(height: height * 0.1),
-                        Align(
-                            alignment: Alignment.centerLeft,
-                            child: OutlinedButton(
-                              child: const Icon(
-                                Icons.arrow_back,
-                                color: Colors.black,
-                              ),
-                              style: OutlinedButton.styleFrom(
-                                  side: const BorderSide(
-                                      color: Colors.black, width: 1)),
-                              onPressed: () =>
-                                  router.pushNamedAndRemoveUntil(Routes.LOGIN),
-                            )),
-                        SizedBox(height: height * 0.04),
+                        SizedBox(height: height * 0.05),
+                        SizedBox(
+                          height: height * 0.04,
+                        ),
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "Cuál es tu",
+                            "Ingresa tu",
                             style: TextStyle(
                                 fontFamily: 'Silka Bold',
                                 fontSize: 26,
@@ -70,8 +61,19 @@ class RegisterPageLastName extends StatelessWidget {
                                 color: Colors.black87),
                           ),
                         ),
+                        SizedBox(height: height * 0.05),
+                        const Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "Sabemos que para ti y para nosotros es importante la privacidad de los datos, por ese motivo queremos que confíes de que tus datos estarán siempre seguros y seran utilizados solo para fines de seguridad.",
+                            style: TextStyle(
+                                fontFamily: 'Silka Semibold',
+                                fontSize: 12,
+                                color: Colors.black87),
+                          ),
+                        ),
                         SizedBox(
-                          height: height * 0.08,
+                          height: height * 0.05,
                         ),
                         CustomInputField(
                           hintText: 'Apellido',
