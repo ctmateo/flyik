@@ -8,6 +8,8 @@ import 'package:tyfon/app/views/register/controller/register_state.dart';
 import 'package:tyfon/app/views/register/utils/send_register_form.dart';
 
 import 'package:flutter_meedu/meedu.dart';
+import 'package:flutter_meedu/router.dart' as router;
+import 'package:tyfon/app/views/routes/routes.dart';
 
 final registerProvider = StateProvider<RegisterController, RegisterState>(
   (_) => RegisterController(sessionProvider.read),
@@ -35,6 +37,20 @@ class RegisterPagePassword extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(height: height * 0.1),
+                        Align(
+                            alignment: Alignment.centerLeft,
+                            child: OutlinedButton(
+                              child: const Icon(
+                                Icons.arrow_back,
+                                color: Colors.black,
+                              ),
+                              style: OutlinedButton.styleFrom(
+                                  side: const BorderSide(
+                                      color: Colors.black, width: 1)),
+                              onPressed: () =>
+                                  router.pushNamedAndRemoveUntil(Routes.LOGIN),
+                            )),
+                        SizedBox(height: height * 0.04),
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -93,7 +109,7 @@ class RegisterPagePassword extends StatelessWidget {
                           );
                         }),
                         SizedBox(
-                          height: height * 0.45,
+                          height: height * 0.1,
                         ),
                         MaterialButton(
                             minWidth: 450,

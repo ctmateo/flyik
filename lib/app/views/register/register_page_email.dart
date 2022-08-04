@@ -109,7 +109,7 @@ class RegisterPageEmail extends StatelessWidget {
                           );
                         }),
                         SizedBox(
-                          height: height * 0.36,
+                          height: height * 0.1,
                         ),
                         MaterialButton(
                             minWidth: 450,
@@ -118,7 +118,7 @@ class RegisterPageEmail extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5.0)),
                             onPressed: () =>
-                                router.pushNamed(Routes.REGISTERNAME),
+                                router.popAndPushNamed(Routes.REGISTERNAME),
                             child: const Text(
                               'Siguiente',
                               style: TextStyle(

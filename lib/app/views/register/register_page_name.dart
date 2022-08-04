@@ -35,6 +35,22 @@ class RegisterPageName extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(height: height * 0.1),
+                        Align(
+                            alignment: Alignment.centerLeft,
+                            child: OutlinedButton(
+                              child: const Icon(
+                                Icons.arrow_back,
+                                color: Colors.black,
+                              ),
+                              style: OutlinedButton.styleFrom(
+                                  side: const BorderSide(
+                                      color: Colors.black, width: 1)),
+                              onPressed: () =>
+                                  router.pushNamedAndRemoveUntil(Routes.LOGIN),
+                            )),
+                        SizedBox(
+                          height: height * 0.04,
+                        ),
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -63,7 +79,7 @@ class RegisterPageName extends StatelessWidget {
                           onChanged: controller.onNameChanged,
                         ),
                         SizedBox(
-                          height: height * 0.55,
+                          height: height * 0.1,
                         ),
                         MaterialButton(
                             minWidth: 450,
