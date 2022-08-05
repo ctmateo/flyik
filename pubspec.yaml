@@ -97,16 +97,20 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: Silka Medium
-       fonts:
+    - family: Silka Black
+      fonts:
+          - asset: assets/fonts/Silka Black.otf
+
+    - family: Silka Medium
+      fonts:
           - asset: assets/fonts/Silka Medium.otf
 
-     - family: Silka SemiBold
-       fonts:
+    - family: Silka SemiBold
+      fonts:
           - asset: assets/fonts/Silka SemiBold.otf
 
-     - family: Silka Bold
-       fonts:
+    - family: Silka Bold
+      fonts:
           - asset: assets/fonts/Silka Bold.otf
     
   

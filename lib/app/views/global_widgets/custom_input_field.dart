@@ -64,7 +64,8 @@ class _CustomInputFieldState extends State<CustomInputField> {
                                 _obscureText
                                     ? Icons.remove_red_eye_outlined
                                     : Icons.remove_red_eye,
-                                color: Colors.black,
+                                color: const Color.fromARGB(255, 20, 20, 20),
+                                size: 21,
                               ),
                               onPressed: () {
                                 _obscureText = !_obscureText;
@@ -79,7 +80,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
                           borderSide: BorderSide(color: Colors.black38)),
                       focusedBorder: const OutlineInputBorder(
                           borderSide:
-                              BorderSide(color: Colors.black87, width: 1.5))),
+                              BorderSide(color: Colors.black87, width: 0.9))),
                   cursorColor: Colors.black87,
                   style:
                       const TextStyle(fontFamily: 'Silka Medium', fontSize: 13),
@@ -91,7 +92,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
                         state.errorText!,
                         style: const TextStyle(
                             fontFamily: 'Silka Medium',
-                            fontSize: 12,
+                            fontSize: 10,
                             color: Colors.black87),
                       )),
               ],

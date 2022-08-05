@@ -43,7 +43,7 @@ class RegisterPageName extends StatelessWidget {
                           child: Text(
                             "Ingresa los",
                             style: TextStyle(
-                                fontFamily: 'Silka Bold',
+                                fontFamily: 'Silka Black',
                                 fontSize: 26,
                                 color: Colors.black87),
                           ),
@@ -53,7 +53,7 @@ class RegisterPageName extends StatelessWidget {
                           child: Text(
                             "siguientes datos",
                             style: TextStyle(
-                                fontFamily: 'Silka Bold',
+                                fontFamily: 'Silka Black',
                                 fontSize: 26,
                                 color: Colors.black87),
                           ),
@@ -64,8 +64,8 @@ class RegisterPageName extends StatelessWidget {
                           child: Text(
                             "Sabemos que para ti y para nosotros es importante la privacidad de los datos, por ese motivo queremos que confíes de que tus datos estarán siempre seguros y seran utilizados solo para fines de seguridad.",
                             style: TextStyle(
-                                fontFamily: 'Silka Semibold',
-                                fontSize: 12,
+                                fontFamily: 'Silka medium',
+                                fontSize: 11,
                                 color: Colors.black87),
                           ),
                         ),
@@ -81,7 +81,7 @@ class RegisterPageName extends StatelessWidget {
                         ),
                         CustomInputField(
                           hintText: 'Apellido',
-                          onChanged: controller.onNameChanged,
+                          onChanged: controller.onLastNameChanged,
                         ),
                         SizedBox(
                           height: height * 0.1,
@@ -93,12 +93,12 @@ class RegisterPageName extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5.0)),
                             onPressed: () =>
-                                router.pushNamed(Routes.REGISTERLASTNAME),
+                                router.pushNamed(Routes.REGISTERPASSWORD),
                             child: const Text(
                               'Siguiente',
                               style: TextStyle(
                                   fontFamily: 'Silka Semibold',
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   color: Colors.white),
                             )),
                       ],

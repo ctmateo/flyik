@@ -77,7 +77,6 @@ class RegisterPageLastName extends StatelessWidget {
                         ),
                         CustomInputField(
                           hintText: 'Apellido',
-                          onChanged: controller.onLastNameChanged,
                         ),
                         SizedBox(
                           height: height * 0.1,

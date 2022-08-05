@@ -36,20 +36,7 @@ class RegisterPageEmail extends StatelessWidget {
                     key: controller.formKey,
                     child: Column(
                       children: [
-                        SizedBox(height: height * 0.1),
-                        Align(
-                            alignment: Alignment.centerLeft,
-                            child: OutlinedButton(
-                              child: const Icon(
-                                Icons.arrow_back,
-                                color: Colors.black,
-                              ),
-                              style: OutlinedButton.styleFrom(
-                                  side: const BorderSide(
-                                      color: Colors.black, width: 1)),
-                              onPressed: () =>
-                                  router.pushNamedAndRemoveUntil(Routes.LOGIN),
-                            )),
+                        SizedBox(height: height * 0.05),
                         SizedBox(
                           height: height * 0.04,
                         ),
@@ -58,7 +45,7 @@ class RegisterPageEmail extends StatelessWidget {
                           child: Text(
                             "Danos un",
                             style: TextStyle(
-                                fontFamily: 'Silka Bold',
+                                fontFamily: 'Silka Black',
                                 fontSize: 26,
                                 color: Colors.black87),
                           ),
@@ -68,19 +55,19 @@ class RegisterPageEmail extends StatelessWidget {
                           child: Text(
                             "correo electrónico",
                             style: TextStyle(
-                                fontFamily: 'Silka Bold',
+                                fontFamily: 'Silka black',
                                 fontSize: 26,
                                 color: Colors.black87),
                           ),
                         ),
-                        SizedBox(height: height * 0.03),
+                        SizedBox(height: height * 0.05),
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "Con tu correo podrás acceder a un mundo digital nunca antes visto, además de esto podrás ser parte de una red de servicios, novedades y ofertas únicas que Fliyk A Regular Sales Company™ ofrece para ti y tu negocio. ",
+                            "Con tu correo podrás acceder a un mundo digital nunca antes visto, además de esto podrás ser parte de una red de servicios, novedades y ofertas únicas que Fliyk A Regular Sales Company™ te ofrece a ti y a tu negocio. ",
                             style: TextStyle(
-                                fontFamily: 'Silka Semibold',
-                                fontSize: 12,
+                                fontFamily: 'Silka medium',
+                                fontSize: 11,
                                 color: Colors.black87),
                           ),
                         ),
@@ -134,7 +121,7 @@ class RegisterPageEmail extends StatelessWidget {
                               'Siguiente',
                               style: TextStyle(
                                   fontFamily: 'Silka Semibold',
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   color: Colors.white),
                             )),
                       ],

@@ -31,9 +31,8 @@ class LoginPage extends StatelessWidget {
             backgroundColor: const Color(0xFFffffff),
             body: GestureDetector(
               onTap: () => FocusScope.of(context).unfocus(),
-              child: Container(
+              child: SingleChildScrollView(
                   padding: const EdgeInsets.only(left: 30, right: 30),
-                  color: Colors.transparent,
                   child: Form(
                     key: controller.formkey,
                     child: Column(
@@ -55,9 +54,9 @@ class LoginPage extends StatelessWidget {
                             )),
                         SizedBox(height: height * 0.08),
                         const Text(
-                          "Bienvenido a Fliyk™",
+                          "Buenas tardes dice Fliyk",
                           style: TextStyle(
-                              fontFamily: 'Silka Bold',
+                              fontFamily: 'Silka Black',
                               fontSize: 26,
                               color: Colors.black87),
                         ),
@@ -67,7 +66,7 @@ class LoginPage extends StatelessWidget {
                         const Text(
                           'Por favor ingresa tu correo electrónico y contraseña',
                           style: TextStyle(
-                              fontFamily: 'Silka Semibold', fontSize: 12),
+                              fontFamily: 'Silka Medium', fontSize: 11),
                         ),
                         SizedBox(height: height * 0.02),
                         CustomInputField(
@@ -122,7 +121,7 @@ class LoginPage extends StatelessWidget {
                               'Iniciar sesión',
                               style: TextStyle(
                                   fontFamily: 'Silka Semibold',
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   color: Colors.white),
                             )),
                         SizedBox(height: height * 0.03),
@@ -133,7 +132,7 @@ class LoginPage extends StatelessWidget {
                             child: const Text('Registrarme',
                                 style: TextStyle(
                                   fontFamily: 'Silka Semibold',
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   color: Colors.black,
                                 )),
                             style: OutlinedButton.styleFrom(
@@ -141,8 +140,8 @@ class LoginPage extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(5.0)),
                                 side: const BorderSide(
                                     color: Colors.black87, width: 1.3)),
-                            onPressed: () => router
-                                .pushNamedAndRemoveUntil(Routes.REGISTEREMAIL),
+                            onPressed: () =>
+                                router.pushNamed(Routes.REGISTEREMAIL),
                           ),
                         ),
                       ],

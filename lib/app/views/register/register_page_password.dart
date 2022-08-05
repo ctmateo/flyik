@@ -36,27 +36,14 @@ class RegisterPagePassword extends StatelessWidget {
                     key: controller.formKey,
                     child: Column(
                       children: [
-                        SizedBox(height: height * 0.1),
-                        Align(
-                            alignment: Alignment.centerLeft,
-                            child: OutlinedButton(
-                              child: const Icon(
-                                Icons.arrow_back,
-                                color: Colors.black,
-                              ),
-                              style: OutlinedButton.styleFrom(
-                                  side: const BorderSide(
-                                      color: Colors.black, width: 1)),
-                              onPressed: () =>
-                                  router.pushNamedAndRemoveUntil(Routes.LOGIN),
-                            )),
+                        SizedBox(height: height * 0.05),
                         SizedBox(height: height * 0.04),
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
                             "Crea una",
                             style: TextStyle(
-                                fontFamily: 'Silka Bold',
+                                fontFamily: 'Silka Black',
                                 fontSize: 26,
                                 color: Colors.black87),
                           ),
@@ -66,7 +53,7 @@ class RegisterPagePassword extends StatelessWidget {
                           child: Text(
                             "contraseña segura",
                             style: TextStyle(
-                                fontFamily: 'Silka Bold',
+                                fontFamily: 'Silka Black',
                                 fontSize: 26,
                                 color: Colors.black87),
                           ),
@@ -122,7 +109,7 @@ class RegisterPagePassword extends StatelessWidget {
                               'Finalizar',
                               style: TextStyle(
                                   fontFamily: 'Silka Semibold',
-                                  fontSize: 15,
+                                  fontSize: 14,
                                   color: Colors.white),
                             )),
                       ],
