@@ -32,29 +32,37 @@ class LoginPage extends StatelessWidget {
             body: GestureDetector(
               onTap: () => FocusScope.of(context).unfocus(),
               child: SingleChildScrollView(
-                  padding: const EdgeInsets.only(left: 30, right: 30),
+                  padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
                   child: Form(
                     key: controller.formkey,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: height * 0.09),
-                        Align(
-                            alignment: Alignment.centerLeft,
-                            child: OutlinedButton(
-                              child: const Icon(
-                                Icons.arrow_back,
-                                color: Colors.black,
-                              ),
-                              style: OutlinedButton.styleFrom(
-                                  side: const BorderSide(
-                                      color: Colors.black, width: 1)),
-                              onPressed: () =>
-                                  router.pushNamedAndRemoveUntil(Routes.LOGIN),
-                            )),
-                        SizedBox(height: height * 0.08),
+                        Row(
+                          children: [
+                            CupertinoButton(
+                                padding: const EdgeInsets.only(left: 0),
+                                onPressed: () => (""),
+                                child: Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.arrow_back_ios,
+                                      size: 18,
+                                    ),
+                                    Text(
+                                      "Iniciar sesión",
+                                      style: TextStyle(
+                                        fontFamily: 'Silka Medium',
+                                        fontSize: 15,
+                                      ),
+                                    )
+                                  ],
+                                ))
+                          ],
+                        ),
+                        SizedBox(height: height * 0.05),
                         const Text(
-                          "Buenas tardes dice Fliyk",
+                          "Te damos la bienvenida a Fliyk®",
                           style: TextStyle(
                               fontFamily: 'Silka Black',
                               fontSize: 26,
