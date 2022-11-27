@@ -36,7 +36,7 @@ class RegisterPageEmail extends StatelessWidget {
                     key: controller.formKey,
                     child: Column(
                       children: [
-                            ),
+                            Icon(Icons.arrow_back),
                             Padding(padding: EdgeInsets.only(right: 260)),
                             Icon(
                               Icons.close,
@@ -118,6 +118,7 @@ class RegisterPageEmail extends StatelessWidget {
                                   color: Colors.white),
                             )),
                       ],
+                      
                     ),
                   )),
             ));
