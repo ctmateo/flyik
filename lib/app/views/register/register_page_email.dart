@@ -36,10 +36,7 @@ class RegisterPageEmail extends StatelessWidget {
                     key: controller.formKey,
                     child: Column(
                       children: [
-                        SizedBox(height: height * 0.05),
-                        SizedBox(
-                          height: height * 0.04,
-                        ),
+                        SizedBox(height: height * 0.15),
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
