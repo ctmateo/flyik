@@ -77,7 +77,8 @@ class _CustomInputFieldState extends State<CustomInputField> {
                             ),
                       hintText: widget.hintText,
                       enabledBorder: const OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black38)),
+                          borderSide: BorderSide(
+                              color: Color.fromARGB(95, 192, 192, 192))),
                       focusedBorder: const OutlineInputBorder(
                           borderSide:
                               BorderSide(color: Colors.black87, width: 0.9))),

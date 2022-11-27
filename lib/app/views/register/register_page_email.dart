@@ -36,32 +36,30 @@ class RegisterPageEmail extends StatelessWidget {
                     key: controller.formKey,
                     child: Column(
                       children: [
-                        SizedBox(height: height * 0.15),
+                            ),
+                            Padding(padding: EdgeInsets.only(right: 260)),
+                            Icon(
+                              Icons.close,
+                              size: 34,
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: height * 0.03,
+                        ),
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "Danos un",
                             style: TextStyle(
                                 fontFamily: 'Silka Black',
                                 fontSize: 26,
-                                color: Colors.black87),
                           ),
                         ),
+                        SizedBox(height: height * 0.03),
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "correo electrónico",
-                            style: TextStyle(
-                                fontFamily: 'Silka black',
-                                fontSize: 26,
-                                color: Colors.black87),
-                          ),
-                        ),
-                        SizedBox(height: height * 0.05),
-                        const Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "Con tu correo podrás acceder a un mundo digital nunca antes visto, además de esto podrás ser parte de una red de servicios, novedades y ofertas únicas que Fliyk A Regular Sales Company™ te ofrece a ti y a tu negocio. ",
+                            "Con tu correo podrás acceder a un mundo digital nunca antes visto, además de esto podrás ser parte de una red de servicios, novedades y ofertas únicas que Fliyk A Regular Sales Company™ te ofrece a ti y a tu empresa. ",
                             style: TextStyle(
                                 fontFamily: 'Silka medium',
                                 fontSize: 11,
@@ -103,9 +101,7 @@ class RegisterPageEmail extends StatelessWidget {
                             },
                           );
                         }),
-                        SizedBox(
-                          height: height * 0.1,
-                        ),
+                        SizedBox(height: height * 0.38),
                         MaterialButton(
                             minWidth: 450,
                             height: 60,
