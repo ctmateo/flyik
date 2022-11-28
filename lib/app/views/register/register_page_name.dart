@@ -35,8 +35,21 @@ class RegisterPageName extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(height: height * 0.05),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.arrow_back,
+                              size: 34,
+                            ),
+                            Padding(padding: EdgeInsets.only(right: 260)),
+                            Icon(
+                              Icons.close,
+                              size: 34,
+                            )
+                          ],
+                        ),
                         SizedBox(
-                          height: height * 0.04,
+                          height: height * 0.03,
                         ),
                         const Align(
                           alignment: Alignment.centerLeft,
@@ -84,7 +97,7 @@ class RegisterPageName extends StatelessWidget {
                           onChanged: controller.onLastNameChanged,
                         ),
                         SizedBox(
-                          height: height * 0.1,
+                          height: height * 0.36,
                         ),
                         MaterialButton(
                             minWidth: 450,

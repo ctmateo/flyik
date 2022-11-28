@@ -48,13 +48,14 @@ class LoginPage extends StatelessWidget {
                                     Icon(
                                       Icons.arrow_back_ios,
                                       size: 18,
+                                      color: Colors.black87,
                                     ),
                                     Text(
                                       "Iniciar sesión",
                                       style: TextStyle(
-                                        fontFamily: 'Silka Medium',
-                                        fontSize: 15,
-                                      ),
+                                          fontFamily: 'Silka Bold',
+                                          fontSize: 15,
+                                          color: Colors.black87),
                                     )
                                   ],
                                 ))
