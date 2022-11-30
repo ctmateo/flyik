@@ -76,6 +76,7 @@ class RegisterPageLastName extends StatelessWidget {
                           height: height * 0.05,
                         ),
                         CustomInputField(
+                          labelText: '',
                           hintText: 'Apellido',
                         ),
                         SizedBox(

@@ -35,13 +35,26 @@ class RegisterPageName extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(height: height * 0.05),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.arrow_back,
+                              size: 34,
+                            ),
+                            Padding(padding: EdgeInsets.only(right: 260)),
+                            Icon(
+                              Icons.close,
+                              size: 34,
+                            )
+                          ],
+                        ),
                         SizedBox(
-                          height: height * 0.04,
+                          height: height * 0.03,
                         ),
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "Ingresa los",
+                            "Crea tu asombrosa",
                             style: TextStyle(
                                 fontFamily: 'Silka Black',
                                 fontSize: 26,
@@ -51,7 +64,7 @@ class RegisterPageName extends StatelessWidget {
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "siguientes datos",
+                            "cuenta",
                             style: TextStyle(
                                 fontFamily: 'Silka Black',
                                 fontSize: 26,
@@ -73,18 +86,20 @@ class RegisterPageName extends StatelessWidget {
                           height: height * 0.05,
                         ),
                         CustomInputField(
-                          hintText: 'Nombre',
+                          hintText: 'Ernesto',
+                          labelText: "Nombres",
                           onChanged: controller.onNameChanged,
                         ),
                         SizedBox(
                           height: height * 0.03,
                         ),
                         CustomInputField(
-                          hintText: 'Apellido',
+                          hintText: 'Perez',
+                          labelText: "Apellidos",
                           onChanged: controller.onLastNameChanged,
                         ),
                         SizedBox(
-                          height: height * 0.1,
+                          height: height * 0.36,
                         ),
                         MaterialButton(
                             minWidth: 450,
@@ -95,7 +110,7 @@ class RegisterPageName extends StatelessWidget {
                             onPressed: () =>
                                 router.pushNamed(Routes.REGISTERPASSWORD),
                             child: const Text(
-                              'Siguiente',
+                              'Confirmar',
                               style: TextStyle(
                                   fontFamily: 'Silka Semibold',
                                   fontSize: 14,

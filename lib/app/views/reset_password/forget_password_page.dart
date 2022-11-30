@@ -57,6 +57,7 @@ class ForgetPasswordPage extends StatelessWidget {
                   SizedBox(height: height * 0.02),
                   CustomInputField(
                     hintText: "Correo electrónico",
+                    labelText: "tucorreo@email.com",
                     onChanged: controller.onEmailChanged,
                     inputType: TextInputType.emailAddress,
                   ),
