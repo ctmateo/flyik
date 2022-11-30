@@ -54,7 +54,7 @@ class RegisterPageName extends StatelessWidget {
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "Ingresa los",
+                            "Crea tu asombrosa",
                             style: TextStyle(
                                 fontFamily: 'Silka Black',
                                 fontSize: 26,
@@ -64,7 +64,7 @@ class RegisterPageName extends StatelessWidget {
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
-                            "siguientes datos",
+                            "cuenta",
                             style: TextStyle(
                                 fontFamily: 'Silka Black',
                                 fontSize: 26,
@@ -86,14 +86,16 @@ class RegisterPageName extends StatelessWidget {
                           height: height * 0.05,
                         ),
                         CustomInputField(
-                          hintText: 'Nombre',
+                          hintText: 'Ernesto',
+                          labelText: "Nombres",
                           onChanged: controller.onNameChanged,
                         ),
                         SizedBox(
                           height: height * 0.03,
                         ),
                         CustomInputField(
-                          hintText: 'Apellido',
+                          hintText: 'Perez',
+                          labelText: "Apellidos",
                           onChanged: controller.onLastNameChanged,
                         ),
                         SizedBox(
@@ -108,7 +110,7 @@ class RegisterPageName extends StatelessWidget {
                             onPressed: () =>
                                 router.pushNamed(Routes.REGISTERPASSWORD),
                             child: const Text(
-                              'Siguiente',
+                              'Confirmar',
                               style: TextStyle(
                                   fontFamily: 'Silka Semibold',
                                   fontSize: 14,

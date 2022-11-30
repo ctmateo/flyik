@@ -45,16 +45,13 @@ class LoginPage extends StatelessWidget {
                                 onPressed: () => (""),
                                 child: Row(
                                   children: const [
-                                    Icon(
-                                      Icons.arrow_back_ios,
-                                      size: 18,
-                                      color: Colors.black87,
-                                    ),
+                                    Icon(Icons.arrow_back_ios,
+                                        size: 18, color: Colors.black87),
                                     Text(
                                       "Iniciar sesión",
                                       style: TextStyle(
-                                          fontFamily: 'Silka Bold',
-                                          fontSize: 15,
+                                          fontFamily: 'Silka bold',
+                                          fontSize: 13,
                                           color: Colors.black87),
                                     )
                                   ],
@@ -77,9 +74,10 @@ class LoginPage extends StatelessWidget {
                           style: TextStyle(
                               fontFamily: 'Silka Medium', fontSize: 11),
                         ),
-                        SizedBox(height: height * 0.02),
+                        SizedBox(height: height * 0.04),
                         CustomInputField(
-                          hintText: "Correo electrónico",
+                          hintText: "tucorreo@email.com",
+                          labelText: 'Correo electrónico',
                           onChanged: controller.onEmailChanged,
                           inputType: TextInputType.emailAddress,
                           validator: (text) {
@@ -95,6 +93,7 @@ class LoginPage extends StatelessWidget {
                           height: height * 0.03,
                         ),
                         CustomInputField(
+                          labelText: 'Contraseña',
                           hintText: 'Contraseña',
                           passwordActive: true,
                           onChanged: controller.onPasswordChanged,

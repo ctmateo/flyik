@@ -37,7 +37,22 @@ class RegisterPagePassword extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(height: height * 0.05),
-                        SizedBox(height: height * 0.04),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.arrow_back,
+                              size: 34,
+                            ),
+                            Padding(padding: EdgeInsets.only(right: 260)),
+                            Icon(
+                              Icons.close,
+                              size: 34,
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: height * 0.03,
+                        ),
                         const Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -64,6 +79,7 @@ class RegisterPagePassword extends StatelessWidget {
                         CustomInputField(
                           onChanged: controller.onPasswordChanged,
                           hintText: 'Contraseña',
+                          labelText: 'Contraseña',
                           passwordActive: true,
                           validator: (text) {
                             if (text == null) return null;
@@ -81,6 +97,7 @@ class RegisterPagePassword extends StatelessWidget {
                           return CustomInputField(
                             onChanged: controller.onVerifyPasswordChanged,
                             hintText: 'Confirma tu contraseña',
+                            labelText: 'Contraseña',
                             passwordActive: true,
                             validator: (text) {
                               if (text == null) return null;
@@ -96,7 +113,7 @@ class RegisterPagePassword extends StatelessWidget {
                           );
                         }),
                         SizedBox(
-                          height: height * 0.1,
+                          height: height * 0.4,
                         ),
                         MaterialButton(
                             minWidth: 450,

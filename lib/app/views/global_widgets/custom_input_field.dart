@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 class CustomInputField extends StatefulWidget {
   final void Function(String)? onChanged;
   final String hintText;
+  final String labelText;
   final TextInputType? inputType;
   final bool passwordActive;
   final String? Function(String?)? validator;
@@ -12,6 +13,7 @@ class CustomInputField extends StatefulWidget {
       {Key? key,
       this.onChanged,
       required this.hintText,
+      required this.labelText,
       this.inputType,
       this.validator,
       this.passwordActive = false})
@@ -54,9 +56,10 @@ class _CustomInputFieldState extends State<CustomInputField> {
                       widget.onChanged!(text);
                     }
                   },
-                  autofocus: true,
                   keyboardType: widget.inputType,
                   decoration: InputDecoration(
+                      labelText: widget.labelText,
+                      labelStyle: TextStyle(color: Colors.black54),
                       fillColor: Colors.white,
                       suffixIcon: widget.passwordActive
                           ? CupertinoButton(
@@ -75,6 +78,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
                           : Container(
                               width: 0,
                             ),
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
                       hintText: widget.hintText,
                       enabledBorder: const OutlineInputBorder(
                           borderSide: BorderSide(

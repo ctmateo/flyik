@@ -38,16 +38,20 @@ class RegisterPageEmail extends StatelessWidget {
                       children: [
                         SizedBox(height: height * 0.05),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Icon(
-                              Icons.arrow_back,
-                              size: 34,
+                            Row(
+                              children: [
+                                Text(
+                                  "Siguiente",
+                                  style: TextStyle(
+                                      fontFamily: 'Silka Bold', fontSize: 14),
+                                ),
+                                Icon(
+                                  Icons.navigate_next,
+                                )
+                              ],
                             ),
-                            Padding(padding: EdgeInsets.only(right: 260)),
-                            Icon(
-                              Icons.close,
-                              size: 34,
-                            )
                           ],
                         ),
                         SizedBox(
@@ -79,7 +83,8 @@ class RegisterPageEmail extends StatelessWidget {
                         ),
                         CustomInputField(
                           inputType: TextInputType.emailAddress,
-                          hintText: 'Corrreo electrónico',
+                          hintText: "tucorreo@email.com",
+                          labelText: 'Correo electrónico',
                           onChanged: controller.onEmailChanged,
                           validator: (text) {
                             if (text == null) {
@@ -97,7 +102,8 @@ class RegisterPageEmail extends StatelessWidget {
                           watch(registerProvider.select((_) => _.email));
                           return CustomInputField(
                             inputType: TextInputType.emailAddress,
-                            hintText: 'Confirma tu correo electrónico',
+                            hintText: 'tucorreo@email.com',
+                            labelText: "Confirma tu correo electrónico",
                             onChanged: controller.onVerifyEmailChanged,
                             validator: (text) {
                               if (text == null) {
@@ -119,7 +125,7 @@ class RegisterPageEmail extends StatelessWidget {
                             onPressed: () =>
                                 router.pushNamed(Routes.REGISTERNAME),
                             child: const Text(
-                              'Siguiente',
+                              'Confirmar',
                               style: TextStyle(
                                   fontFamily: 'Silka Semibold',
                                   fontSize: 14,
